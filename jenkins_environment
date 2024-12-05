@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                checkout scm
                 // OR specify repository details explicitly:
                 git branch: 'main',
                 credentialsId: 'git_pipeline',
