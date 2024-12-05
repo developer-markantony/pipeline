@@ -1,0 +1,29 @@
+pipeline{
+
+envernment{
+		GIT_URL = 'https://github.com/developer-markantony/pipeline.git'
+		GIT_BRANCH = 'main'
+		GIT_CREDIANTIALS='git_pipeline '		
+	}
+	stages{
+		stage('checkout')
+			steps{
+				scripts{
+					git branch: "$(env.GIT_URL)",
+					credentialsId: "$(env.IT_CREDIANTIALS)",
+					url: "$(env.GIT_URL)"
+       	
+					}	
+				}
+
+		stage('CHECK')
+			steps{
+				sh '''
+				ls -lrt
+				echo "env"
+				env
+				'''
+			}
+		}
+	}
+}
