@@ -6,7 +6,7 @@ pipeline {
        
         BRANCH = 'main'
         GIT_URL = 'https://github.com/developer-markantony/pipeline.git'
-        CRED_ID = 'developer-markantony'
+        CRED_ID = 'slave_mumbai_id'
     }
 
     stages {
